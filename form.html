@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Register Form</title>
+  <link rel="icon" href="logoforicon.png">
+  <link rel="stylesheet" type="text/css" href="form.css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" href="logoforicon.png">
+</head>
+<body>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img src="logo.png" height="100"width="100">
+        <span class="ml-3 text-xl">ARCH</span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <a href="home.html"class="mr-5 hover:text-gray-900">HOME</a>
+        <a href="hh.html"class="mr-5 hover:text-gray-900">CUSTOMER</a>
+        <a href="login.html"class="mr-5 hover:text-gray-900">ARCHITECT</a>
+      </nav>
+    </div>
+</header>
+  <script>
+  // Some random colors
+  const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+  
+  const numBalls = 50;
+  const balls = [];
+  
+  for (let i = 0; i < numBalls; i++) {
+    let ball = document.createElement("div");
+    ball.classList.add("ball");
+    ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+    ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+    ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+    ball.style.transform = `scale(${Math.random()})`;
+    ball.style.width = `${Math.random()}em`;
+    ball.style.height = ball.style.width;
+    
+    balls.push(ball);
+    document.body.append(ball);
+  }
+  
+  // Keyframes
+  balls.forEach((el, i, ra) => {
+    let to = {
+      x: Math.random() * (i % 2 === 0 ? -11 : 11),
+      y: Math.random() * 12
+    };
+  
+    let anim = el.animate(
+      [
+        { transform: "translate(0, 0)" },
+        { transform: `translate(${to.x}rem, ${to.y}rem)` }
+      ],
+      {
+        duration: (Math.random() + 1) * 2000, // random duration
+        direction: "alternate",
+        fill: "both",
+        iterations: Infinity,
+        easing: "ease-in-out"
+      }
+    );
+  });
+</script>
+ <form action="form.php" method="POST">
+   <div class="c">
+  <table>
+
+   <tr>
+    <td>Name :</td>
+    <td><input type="text" name="name" required></td>
+   </tr>
+   <tr>
+    <td>Email :</td>
+    <td><input type="email" name="email" required></td>
+   </tr>
+   <tr>
+    <td>Phone number :</td>
+    <td><input type="number" name="phonenumber" required></td>
+   </tr>
+   <tr>
+    <td>Type of architecture :</td>
+    <td><input type="text" name="type" required></td>
+   </tr>
+   <tr>
+    <td>Years of experice :</td>
+    <td><input type="text" name="yearsofexperience" required></td>
+   </tr>
+   <tr>
+    <td>Bio :</td>
+    <td><input type="text" name="bio" required></td>
+   </tr>
+   <tr>
+    <td>twitter:</td>
+    <td><input type="text" name="twitter" required></td>
+   </tr>
+   <tr>
+    <td>facebook :</td>
+    <td><input type="text" name="facebook" required></td>
+   </tr>
+   <tr>
+    <td>instagram :</td>
+    <td><input type="text" name="instagram" required></td>
+   </tr>
+   <tr>
+    <td>linked in :</td>
+    <td><input type="text" name="linkedin" required></td>
+   </tr>
+   <tr>
+    <td>instagram :</td>
+    <td><input type="text" name="instagram" required></td>
+   </tr>
+   <tr>
+    <td>Previous  experience:</td>
+    <td><input  type="text" name="previousexp" required></td>
+   </tr>
+   <tr>
+    <td><input type="submit" value="Submit" name="submit"></td>
+   </tr>
+  </table>
+</div>
+ </form>
+ <div class="hello">
+ <a href="payment.html">payment </a>
+</div>
+
+
+
+ <div class="footer">
+  <footer class="text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <img src="logo.png" height="100"width="100">
+        <span class="ml-3 text-xl">ARCADE</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© our
+        <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">link</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+ </footer>  
+ <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-eaa2fb55-c45e-4cbd-83cc-a0fd288ffc14"></div>
+</body>
+</html>

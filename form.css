@@ -1,0 +1,20 @@
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+  }
+.c{
+padding-left: 350px;
+text-decoration: solid;
+font-size: larger;
+ box-decoration-break:black ;
+  }
+  .hello{
+      padding-left: 600px;
+      font-size: x-large;
+      box-decoration-break:border ;
+  }
+  .tr{
+      border: tomato;
+      border-radius: 10px;
+  }
